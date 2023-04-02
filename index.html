@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const aplhabet = 'abcdefghijklmnopqrstuvwxyz'
+      const reversedAlphabet = aplhabet.split('').reverse()
+
+      const reverseText = (text = '') => {
+        const arr = text.split('')
+        return arr
+          .map((char) => {
+            if (aplhabet.indexOf(char) > -1) {
+              const index = aplhabet.indexOf(char)
+              return reversedAlphabet[index]
+            }
+            return char
+          })
+          .join('')
+      }
+
+      let isSent = false
+      const socket = new WebSocket('wss://cekirdektenyetisenler.kartaca.com/ws')
+
+      socket.addEventListener('open', () => {
+        console.log('Bağlantı kuruldu')
+      })
+
+      socket.addEventListener('message', (e) => {
+        console.log(e.data)
+        const data = JSON.parse(e.data)
+        if (!isSent) {
+          isSent = true
+          socket.send(
+            JSON.stringify({
+              type: 'REGISTER',
+              name: 'Cem',
+              surname: 'Özgeldi',
+              email: 'cemozgeldi@gmail.com',
+              registrationKey: reverseText(data.message.split(' : ')[2])
+            })
+          )
+        }
+      })
+    </script>
+  </body>
+</html>
+
+
