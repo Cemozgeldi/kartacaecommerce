@@ -1,5 +1,6 @@
 # kartacaecommerce
 bu göreve ulaşabilmek için oluşturulan registerKey = u0zxu5682u9v35zw4054zwu2z91u7w6w0361v2zux3w27y728321y1y4xzvwz006
+ve göreve ulaşabilmek adına yazılan kod index.html klasörünün içinde bulunmaktadır.
 
 Ecommerce Proje
 Kartaca E-commerce Projesi
