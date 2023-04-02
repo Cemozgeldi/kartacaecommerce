@@ -52,4 +52,4 @@ Backend'i başlatmak için npm run dev komutunu kullanın
 Frontend klasörüne gitmek için cd frontend komutunu kullanın
 Frontend için .env dosyasını oluşturun ve gerekli değişkenleri ayarlayın (örneğin, API bağlantısı için REACT_APP_API_URL)
 Frontend'i başlatmak için npm start komutunu kullanın
-Bu adımları tamamladıktan sonra, uygulamayı yerel bilgisayarınızda http://localhost:3000 adresinden görüntüleyebilirsiniz.
+Bu adımları tamamladıktan sonra, uygulamayı yerel bilgisayarınızda http://localhost:3000 adresinden görüntüleyebilirsiniz..
